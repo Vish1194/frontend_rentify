@@ -18,7 +18,7 @@ export default defineConfig({
       '/api': { // Matches requests starting with '/api'
         target: targetApiUrl, // Replace with your API URL
         changeOrigin: true, // Preserves the host header
-        rewrite: (path) => path.replace(/^\/api/,''), // Removes '/api' from request path
+        rewrite: (path) => path.replace(/^\//,''), // Removes '/api' from request path
       },
     },
   }
